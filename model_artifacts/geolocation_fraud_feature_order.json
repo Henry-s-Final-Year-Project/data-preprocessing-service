@@ -1,0 +1,1 @@
+["amount", "currency", "transaction_type", "country", "latitude", "longitude", "timezone", "device_type", "operating_system", "app_version", "avg_spend_30d", "transactions_last_7d", "time_since_last_login", "login_attempts_last_24h", "is_new_device", "vpn_usage", "proxy_usage", "ip_risk_score", "ASN", "ISP"]

@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  data-preprocessing-service:
+    build: .
+    container_name: data-preprocessing-service
+    networks:
+      - kafka-net
+    environment:
+      - KAFKA_BROKER=kafka:9092
+      - KAFKA_RAW_TOPIC=card-raw-data-topic
+      - KAFKA_PREPROCESSED_TOPIC=card-preprocessed-data-topic
+      - KAFKA_CT_GROUP_ID=card-transaction-group
+    volumes:
+      - ./model_artifacts:/app/model_artifacts
+    command: ["python", "run_kafka_worker.py"]
+
+networks:
+  kafka-net:
+    external: true
