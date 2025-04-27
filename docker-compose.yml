@@ -7,7 +7,7 @@ services:
     networks:
       - kafka-net
     environment:
-      - KAFKA_BROKER=kafka:9092
+      - KAFKA_BROKER=kafka:29092
       - KAFKA_RAW_TOPIC=card-raw-data-topic
       - KAFKA_PREPROCESSED_TOPIC=card-preprocessed-data-topic
       - KAFKA_CT_GROUP_ID=card-transaction-group
