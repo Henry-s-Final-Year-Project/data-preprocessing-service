@@ -38,6 +38,13 @@ def start_kafka_consumer():
         try:
             features = preprocess_transaction(raw_tx)
             logger.info("Preprocessed Vector: %s", features)
-            send_to_topic(producer, "card-preprocessed-data-topic", features)
+            send_to_topic(
+                producer,
+                "card-preprocessed-data-topic",
+                {
+                    "original_transaction": raw_tx,
+                    "features": features,
+                },
+            )
         except Exception as e:
             logger.error("Error processing message: %s", e)
