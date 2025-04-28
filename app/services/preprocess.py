@@ -30,6 +30,7 @@ numeric_cols = [
     "ip_risk_score",
     "latitude",
     "longitude",
+    "ASN",
 ]
 
 

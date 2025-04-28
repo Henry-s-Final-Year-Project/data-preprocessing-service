@@ -7,7 +7,6 @@ class CardTransaction(BaseModel):
     currency: Optional[str]
     transaction_type: Optional[str]
     country: Optional[str]
-    city: Optional[str]
     latitude: Optional[float]
     longitude: Optional[float]
     timezone: Optional[str]
@@ -22,4 +21,5 @@ class CardTransaction(BaseModel):
     vpn_usage: Optional[int]
     proxy_usage: Optional[int]
     ip_risk_score: Optional[int]
+    ASN: Optional[int]
     ISP: Optional[str]
